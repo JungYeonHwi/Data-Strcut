@@ -1,0 +1,18 @@
+int degree = 0;
+
+	for (int index = 0; index < g->num_vertices; index++)
+	{
+		node* head;
+		head = g->adj_list[index];
+
+		while (head != NULL)
+		{
+			degree++;
+			head = head->next;
+
+			if (degree+1 == g->num_vertices)
+			{
+				return 1;
+			}
+		}		
+	}
